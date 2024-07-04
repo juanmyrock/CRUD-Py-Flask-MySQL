@@ -89,6 +89,11 @@ hr {
     opacity: 1; 
 }
 
+.cont-carousel{
+    width: 100%;
+    height: min-content;
+}
+
 .galeria-artistas {
     display: flex;
     flex-direction: column;
