@@ -55,8 +55,8 @@ input, button, textarea, select {
     display: flex;
     background-color: black;
     border-radius: 20px;
-    padding-top: 4px;
-    padding-right: 5px;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
     padding-bottom: 0px;
     background-image: linear-gradient(to left, black, #033b8f);
 }
