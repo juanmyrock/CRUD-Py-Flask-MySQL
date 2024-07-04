@@ -43,24 +43,25 @@ input, button, textarea, select {
 /*---------------------------------------------------------------------------*/
 /*Navbar*/
 .navbar-brand {
-    color: white;
+    color: #FAAE25;
     font-size: 1.25rem;
     font-weight: bold;
-}
-
-.navbar-brand img {
-    vertical-align: middle;
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 4px;
+    padding-bottom: 0px;
 }
 
 .nav-link {
-    color: white !important; /* Asegura que los enlaces sean blancos */
-    font-size: 1.25rem; /* Aumenta el tamaño de la fuente */
-    font-weight: bold; /* Hace que el texto sea negrita */
-    transition: color 0.3s; /* Añade una transición suave para el efecto hover */
+    color: white !important; 
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    transition: color 0.3s; 
 }
 
 .nav-link:hover {
-    color: black !important; /* Cambia el color a azul marino cuando el enlace se encuentra en estado hover */
+    color: black !important;
     background-color: #FAAE25;
 }
 
