@@ -1,0 +1,93 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Asegurar que los elementos de formulario hereden el font-family */
+input, button, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+/*---------------------------------------------------------------------------*/
+/*Navbar*/
+.navbar-brand {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+}
+
+.nav-link {
+    color: white !important; /* Asegura que los enlaces sean blancos */
+    font-size: 1.25rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    transition: color 0.3s; /* Añade una transición suave para el efecto hover */
+}
+
+.nav-link:hover {
+    color: black !important; /* Cambia el color a azul marino cuando el enlace se encuentra en estado hover */
+    background-color: #FAAE25;
+}
+
+
+
+/*---------------------------------------------------------------------------*/
+/*Main*/
+
+
+
+
+/*---------------------------------------------------------------------------*/
+/*Footer*/
+
+.last {
+    background-color: #1C3846;
+    color: #1C3846;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.last a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+}
+.last a:hover {
+    text-decoration: underline;
+}
