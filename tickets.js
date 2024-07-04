@@ -80,9 +80,23 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("apellido").value = "";
         document.getElementById("mail").value = "";
         document.getElementById("cant").value = "";
-        categoriaSelect.value = "0";
-        totalElement.textContent = "Total a pagar: $";
+        document.getElementById("categoriaSelect").selectedIndex = 0; // Resetea el select de categoría seleccionando el primer elemento
+        document.getElementById("artistas").selectedIndex = 0; // Resetea el select de artistas seleccionando el primer elemento
+    
+        // Para resetear el campo de archivos (input type="file")
+        const fileInput = document.getElementById("fotos");
+        fileInput.value = null; // Establece el valor del campo de archivos a null
+    
+        // Mostrar nuevamente el label para subir archivos
+        const fileLabel = document.querySelector("label[for='fotos']");
+        fileLabel.style.display = "block";
+    
+        // Ocultar el input de archivos
+        fileInput.style.display = "none";
+    
+        totalElement.textContent = "Total a pagar: $"; // Resetea el texto del total
     }
+    
 
     // Función para obtener el valor de la categoría
     function getCategoriaValue(categoria) {
