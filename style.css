@@ -46,6 +46,7 @@ input, button, textarea, select {
 /*Navbar*/
 .navbar{
     background: linear-gradient(to bottom, #19323e, #3E6578);
+    margin-bottom: 0.5%;
 }
 .navbar-brand {
     color: #fff9ed;
@@ -89,9 +90,14 @@ hr {
     opacity: 1; 
 }
 
-.cont-carousel{
+.cont-carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+.carousel-item img {
+    object-fit: cover;
     width: 100%;
-    height: min-content;
+    height: 90vh; /* Esto ajusta la altura al 100% del viewport */
 }
 
 .galeria-artistas {
