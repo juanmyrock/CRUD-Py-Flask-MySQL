@@ -42,12 +42,20 @@ input, button, textarea, select {
     line-height: inherit;
 }
 
+hr {
+    border: 0; 
+    border-top: 1px solid #999; 
+    border-bottom: 1px solid #333; 
+    height:0;
+    opacity: 1;
+}
 /*---------------------------------------------------------------------------*/
 /*Navbar*/
-.navbar{
-    background-color: #1C3846;
+.navbar {
+    background: linear-gradient(to bottom, #19323e, #3E6578);
     margin-bottom: 2%;
 }
+
 .navbar-brand {
     color: #fff9ed;
     font-size: 1.25rem;
@@ -67,14 +75,13 @@ input, button, textarea, select {
 
 .nav-link {
     color: white !important; 
-    font-size: 1.25rem; 
-    font-weight: bold;
+    font-size: 1rem; 
     transition: color 0.3s; 
 }
 
 .nav-link:hover {
-    color: black !important;
-    background-color: #FAAE25;
+    color: rgb(255, 255, 255) !important;
+    background-color: #1b275e;
 }
 /*---------------------------------------------------------------------------*/
 /*Main*/
@@ -102,6 +109,12 @@ input, button, textarea, select {
     width: 80%;
 }
 
+.formulario {
+    border: 2px solid #000; /* Borde alrededor del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    background-color: #00000011; /* Color de fondo */
+}
 
 .form-label {
     cursor: pointer;

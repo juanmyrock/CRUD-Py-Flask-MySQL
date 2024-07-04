@@ -45,7 +45,7 @@ input, button, textarea, select {
 /*---------------------------------------------------------------------------*/
 /*Navbar*/
 .navbar{
-    background-color: #1C3846;
+    background: linear-gradient(to bottom, #19323e, #3E6578);
 }
 .navbar-brand {
     color: #fff9ed;
@@ -66,14 +66,13 @@ input, button, textarea, select {
 
 .nav-link {
     color: white !important; 
-    font-size: 1.25rem; 
-    font-weight: bold;
+    font-size: 1rem; 
     transition: color 0.3s; 
 }
 
 .nav-link:hover {
-    color: black !important;
-    background-color: #FAAE25;
+    color: rgb(255, 255, 255) !important;
+    background-color: #1b275e;
 }
 /*---------------------------------------------------------------------------*/
 /*Main*/
