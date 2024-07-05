@@ -3,6 +3,41 @@ body {
     font-family: Arial, sans-serif;
     background-color: #d7d7d7;
 }
+/*--------------------------------------------------------------------*/
+/*Navbar*/
+.navbar{
+    background: linear-gradient(to bottom, #19323e, #3E6578);
+    margin-bottom: 0.5%;
+}
+.navbar-brand {
+    color: #fff9ed;
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    background-color: black;
+    border-radius: 20px;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0px;
+    background-image: linear-gradient(to left, black, #033b8f);
+}
+.navbar-brand:hover{
+    transform: scale(1.05); /* Escala la tarjeta al 105% */
+    transition: transform 0.3s ease-in-out; /* Transición más suave al entrar */
+}
+
+.nav-link {
+    color: white !important; 
+    font-size: 1rem; 
+    transition: color 0.3s; 
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: #1b275e;
+}
+/*---------------------------------------------------------------------------*/
+
 
 .container {
     margin-top: 20px;

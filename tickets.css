@@ -51,11 +51,10 @@ hr {
 }
 /*---------------------------------------------------------------------------*/
 /*Navbar*/
-.navbar {
+.navbar{
     background: linear-gradient(to bottom, #19323e, #3E6578);
-    margin-bottom: 2%;
+    margin-bottom: 0.5%;
 }
-
 .navbar-brand {
     color: #fff9ed;
     font-size: 1.25rem;
@@ -63,8 +62,8 @@ hr {
     display: flex;
     background-color: black;
     border-radius: 20px;
-    padding-top: 4px;
-    padding-right: 5px;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
     padding-bottom: 0px;
     background-image: linear-gradient(to left, black, #033b8f);
 }

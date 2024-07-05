@@ -25,32 +25,33 @@
       <!-- Sección Formulario -->
       <div class="container container-max720  formulario">
         <div class="row d-flex justify-content-center">
+          <div class="col-12 text-center mb-4">
+            <a>
+              <img src="img/ticketlogo.png" alt="Logo" width="130" height="55">
+            </a>
+          </div>
           <div class="col-12 text-center mb-4 label">
             <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Iniciar sesión</h1>
           </div>
         </div>
 
         <form class="row justify-content-center form-login" action="" method="">
-          <!-- -------------------------------------------- -->
           <hr>
           <div class="col-md-6 mb-3">
-            <label for="nombre-usuario" class="p-1">Nombre de Usuario</label>
-            <input id="nombre-usuario" class="form-control" type="text" name="nombre-usuario" min="1" max="20"
-              placeholder="Ingrese su usuario" />
+              <label for="nombre-usuario" class="p-1">Nombre de Usuario</label>
+              <input id="nombre-usuario" class="form-control" type="text" name="nombre-usuario" min="1" max="20" placeholder="Ingrese su usuario" />
           </div>
           <div class="col-md-6 mb-4">
-            <label for="contraseña" class="p-1">Contraseña</label>
-            <input id="contraseña" class="form-control" type="password" name="contraseña" min="1" max="20"
-              placeholder="Ingrese su contraseña" />
+              <label for="contraseña" class="p-1">Contraseña</label>
+              <input id="contraseña" class="form-control" type="password" name="contraseña" min="1" max="20" placeholder="Ingrese su contraseña" />
           </div>
-          <!-- ------------------------------------------ -->
-          <div class="col-md-4 mb-4 btn">
-            <a href="home.html"><button class="btn btn-primary" id="resumen" type="submit">Iniciar Sesión</button></a> 
+          <div class="col-md-6 mb-4">
+              <button class="btn btn-primary" id="iniciar-sesion" type="button">Iniciar Sesión</button>
           </div>
-          <div class="col-md-4 mb-4 btn">
-            <button class="btn btn-success" type="submit">Registrate</button>
+          <div class="col-md-6 mb-4">
+              <button class="btn btn-success" id="registrate" type="button">Registrate</button>
           </div>
-        </form>
+      </form>
       </div>
       <!-- Fin Sección Formulario -->
     </section>
@@ -60,6 +61,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script>
+      document.getElementById('iniciar-sesion').addEventListener('click', function() {
+          window.location.href = 'home.html';})
+      document.getElementById('registrate').addEventListener('click', function() {
+          window.location.href = 'registrarse.html';});
+  </script>
 </body>
 
 </html>
