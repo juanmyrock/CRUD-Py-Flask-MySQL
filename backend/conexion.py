@@ -17,10 +17,10 @@ import os
 import time
 #--------------------------------------------------------------------
 #variables para configurar la base de datos.
-HOST = 'evelyngaitan22.mysql.pythonanywhere-services.com'
-USER = 'evelyngaitan22'
-PASSWORD = 'cac-2024#' 
-DATABASE = 'evelyngaitan22$ticket-cac'
+HOST = ''
+USER = ''
+PASSWORD = '' 
+DATABASE = ''
 #HOLA = HOLA para poner todo en mayuscula seleccionar ctr + shift y el comando uppercase en la barra 
 
 app = Flask(__name__)

@@ -2,7 +2,7 @@
 
 from conexion import *
 
-class Catalogo:
+class crudpython:
     
     # Constructor de la clase
     def __init__(self, host, user, password, database):
@@ -32,7 +32,7 @@ class Catalogo:
             contraseña VARCHAR(255) NOT NULL,
             nombre VARCHAR(255) NOT NULL,
             apellido VARCHAR(255) NOT NULL,
-            familia VARCHAR(255) NOT NULL ''')
+            admin TINYINT(1) NOT NULL ''') #los admin tendrian 1 y los usuarios comunes 0 
         self.conn.commit()
 
         # Cerrar el cursor inicial y abrir uno nuevo con el parámetro dictionary=True
