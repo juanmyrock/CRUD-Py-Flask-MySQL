@@ -112,4 +112,19 @@ class crudpython:
         self.cursor.execute(sql, valores)        
         self.conn.commit()
         return self.cursor.lastrowid
-    
+  
+#----------------------------------------------------------------
+    def consultar_usuarios(self, id_usuario):
+        self.cursor.execute(f"SELECT * FROM usuarios WHERE id_usuario = {id_usuario}")
+        return self.cursor.fetchone()
+#----------------------------------------------------------------
+    def consultar_artistas(self, id_artista):
+        self.cursor.execute(f"SELECT * FROM usuarios WHERE id_artista = {id_artista}")
+        return self.cursor.fetchone()
+#----------------------------------------------------------------
+    def consultar_tickets(self, id_ticket):
+        self.cursor.execute(f"SELECT * FROM usuarios WHERE id_ticket = {id_ticket}")
+        return self.cursor.fetchone()
+#----------------------------------------------------------------
+# faltaria hacer el join pero aun no se bien si resolvi la creación de las tabla "familia con exito"
+

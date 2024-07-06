@@ -109,9 +109,9 @@
                 // Iteramos sobre cada producto y agregamos filas a la tabla
                 for (let usuarios of data) {
                     let fila = document.createElement('tr'); //Crea una nueva fila de tabla (<tr>) para cada producto.
-                    fila.innerHTML = '<td>' + usuarios.id + '</td>' +
-                        '<td>' + usuarios.usuario + '</td>' +
-                        '<td align="right">' + usuarios.contraseña + '</td>' +
+                    fila.innerHTML = '<td>' + usuarios.id_usuario + '</td>' +
+                        '<td>' + usuarios.username + '</td>' +
+                        '<td align="right">' + usuarios.password + '</td>' +
                         '<td align="right">' + usuarios.email + '</td>' +
                         '<td align="right">' + usuarios.nombre + '</td>' +
                         '<td align="right">' + usuarios.apellido + '</td>' +
