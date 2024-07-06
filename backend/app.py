@@ -170,3 +170,24 @@ class crudpython:
         artistas = self.cursor.fetchall()
         return artistas
 #----------------------------------------------------------------
+#eliminar registros en las tablas 
+
+def eliminar_usuario(self, id_usuario):
+        # Eliminamos un producto de la tabla a partir de su código
+        self.cursor.execute(f"DELETE FROM usuarios WHERE id_usuario = {id_usuario}")
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+
+def eliminar_ticket(self, id_ticket):
+        # Eliminamos un producto de la tabla a partir de su código
+        self.cursor.execute(f"DELETE FROM tickets WHERE id_usuario = {id_ticket}")
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+
+def eliminar_artista(self, id_artista):
+        # Eliminamos un producto de la tabla a partir de su código
+        self.cursor.execute(f"DELETE FROM artistas WHERE id_artista = {id_artista}")
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+
+#----------------------------------------------------------------
