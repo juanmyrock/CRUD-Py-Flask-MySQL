@@ -1,6 +1,6 @@
 
 
-from conexion import *
+from config import *
 
 class crudpython:
     
