@@ -70,6 +70,8 @@ class crudpython:
         self.cursor = self.conn.cursor(dictionary=True)
 
 #----------------------------------------------------------------
+# se hacen los insert
+
     def agregar_usuario (self, id_familia, username, password, mail, nombre, apellido ):
                
         sql = "INSERT INTO usuarios (id_familia, username, password, mail, nombre, apellido) VALUES (%s, %s, %s, %s, %s)"
@@ -79,7 +81,6 @@ class crudpython:
         self.conn.commit()
         return self.cursor.lastrowid
 
-#----------------------------------------------------------------
 
     def agregar_artista(self, nombre, apellido, nacionalidad, genero, edad):
 
@@ -89,7 +90,7 @@ class crudpython:
         self.cursor.execute(sql, valores)        
         self.conn.commit()
         return self.cursor.lastrowid
-#----------------------------------------------------------------
+
     def agregar_ticket (self, id_usuario, id_artista, nombre, apellido, mail, cantidad, categoria, files):
 
         sql = "INSERT INTO tickets (id_usuario, id_artista, nombre, apellido, mail, cantidad, categoria, files) VALUES (%s, %s, %s, %s, %s)"
@@ -99,9 +100,9 @@ class crudpython:
         self.conn.commit()
         return self.cursor.lastrowid
 
-#----------------------------------------------------------------
+
 # No estoy muy segura de si se puede hacer esto acá jaja 
-    def agregar_ticket (self, familia):
+    def agregar_familia(self, familia):
 
         sql = "INSERT INTO familias (familia) VALUES ('admin')"
         valores = (familia)
@@ -114,17 +115,41 @@ class crudpython:
         return self.cursor.lastrowid
   
 #----------------------------------------------------------------
+# consultar tablas 
+
     def consultar_usuarios(self, id_usuario):
         self.cursor.execute(f"SELECT * FROM usuarios WHERE id_usuario = {id_usuario}")
         return self.cursor.fetchone()
-#----------------------------------------------------------------
+    
     def consultar_artistas(self, id_artista):
         self.cursor.execute(f"SELECT * FROM usuarios WHERE id_artista = {id_artista}")
         return self.cursor.fetchone()
-#----------------------------------------------------------------
+
     def consultar_tickets(self, id_ticket):
         self.cursor.execute(f"SELECT * FROM usuarios WHERE id_ticket = {id_ticket}")
         return self.cursor.fetchone()
 #----------------------------------------------------------------
-# faltaria hacer el join pero aun no se bien si resolvi la creación de las tabla "familia con exito"
+# faltaria hacer el join pero aun no se bien si resolvi la creación de las tabla "familia" con exito
+# Modificar registros 
 
+    def modificar_usuarios(self, id_familia, id_usuario, username, nuevo_password, nuevo_nombre, nuevo_apellido, nuevo_email):
+        sql = "UPDATE myapp_python SET usuarios = %s, nuevo_password = %s, nuevo_nombre = %s, nuevo_apellido = %s, nuevo_email = %s WHERE codigo = %s"
+        valores = (nuevo_password, nuevo_nombre, nuevo_apellido, nuevo_email, id_familia, id_usuario, username)
+        self.cursor.execute(sql, valores)
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+    
+    def modificar_tickets(self, id_ticket, id_usuario, nuevo_artista, nueva_cantidad, nueva_categoria):
+        sql = "UPDATE myapp_python SET tickets = %s, nuevo_artista = %s, nueva_cantidad = %s, nueva_categoria = %s, WHERE codigo = %s"
+        valores = (id_ticket, id_usuario, nuevo_artista, nueva_cantidad, nueva_categoria)
+        self.cursor.execute(sql, valores)
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+
+    def modificar_artistas(self, id_artista,  nuevo_nombre, nuevo_apellido, nueva_nacionalidad, nueva_edad, nuevo_genero ):
+        sql = "UPDATE myapp_python SET artistas = %s, nombre = %s, apellido = %s, nacionalidad = %s, edad = %s, genero = %s WHERE codigo = %s"
+        valores = (id_artista, nuevo_nombre, nuevo_apellido, nueva_nacionalidad, nueva_edad, nuevo_genero)
+        self.cursor.execute(sql, valores)
+        self.conn.commit()
+        return self.cursor.rowcount > 0
+#----------------------------------------------------------------
