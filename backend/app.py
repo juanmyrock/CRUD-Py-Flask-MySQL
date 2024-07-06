@@ -68,6 +68,7 @@ class crudpython:
         # Cerrar el cursor inicial y abrir uno nuevo con el parámetro dictionary=True
         self.cursor.close()
         self.cursor = self.conn.cursor(dictionary=True)
+
 #----------------------------------------------------------------
     def agregar_usuario (self, id_familia, username, password, mail, nombre, apellido ):
                
@@ -99,3 +100,16 @@ class crudpython:
         return self.cursor.lastrowid
 
 #----------------------------------------------------------------
+# No estoy muy segura de si se puede hacer esto acá jaja 
+    def agregar_ticket (self, familia):
+
+        sql = "INSERT INTO familias (familia) VALUES ('admin')"
+        valores = (familia)
+
+        sql = "INSERT INTO familias (familia) VALUES ('usuario')"
+        valores = (familia)
+
+        self.cursor.execute(sql, valores)        
+        self.conn.commit()
+        return self.cursor.lastrowid
+    
