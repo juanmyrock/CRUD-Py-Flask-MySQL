@@ -153,3 +153,20 @@ class crudpython:
         self.conn.commit()
         return self.cursor.rowcount > 0
 #----------------------------------------------------------------
+# mostrar tablas 
+
+    def listar_usuarios(self):
+        self.cursor.execute("SELECT * FROM usuarios")
+        usuarios = self.cursor.fetchall()
+        return usuarios
+    
+    def listar_tickes(self):
+        self.cursor.execute("SELECT * FROM tickets")
+        tickets = self.cursor.fetchall()
+        return tickets
+
+    def listar_artistas(self):
+        self.cursor.execute("SELECT * FROM artistas")
+        artistas = self.cursor.fetchall()
+        return artistas
+#----------------------------------------------------------------
